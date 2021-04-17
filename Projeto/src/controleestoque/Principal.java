@@ -1,4 +1,4 @@
-package controleestoque;
+package controleEstoque;
 import javax.swing.JOptionPane;
 
 public class Principal {
