@@ -1,12 +1,11 @@
-package controleEstoque;
-
+//public class Menu {
 import javax.swing.JOptionPane;
 
 public class Menu {
 
-    public Menu(){}
+    protected Menu(){}
 
-    public static void iniciarMenu(){
+    protected void iniciarMenu(){
 
         int resposta;
         Produto produto = new Produto();
@@ -37,3 +36,4 @@ public class Menu {
 
     
 }
+
