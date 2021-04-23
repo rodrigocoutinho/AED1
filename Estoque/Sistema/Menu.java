@@ -1,5 +1,4 @@
 
-//public class Menu {
 import javax.swing.JOptionPane;
 
 public class Menu {
@@ -25,6 +24,16 @@ public class Menu {
 
         case 1:
             produto.cadastrarProduto();
+            break;
+        
+        case 2:
+            
+        case 3:
+
+        case 4:
+
+        case 5:
+            produto.exibirProdutos();
             break;
 
         default:
