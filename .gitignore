@@ -1,5 +1,6 @@
 ## Directory-based project format:
 .idea/
+.vscode/
 
 # Compiled class file
 *.class
