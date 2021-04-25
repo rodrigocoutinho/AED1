@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.JOptionPane;
 import java.text.NumberFormat;
 
@@ -10,10 +8,7 @@ public class Produto {
     private int quantidade;
     private int id;
 
-    protected Produto() {
-    }
-
-    protected Produto(int id, String nome, int quantidade, double preco) {
+    public Produto(int id, String nome, int quantidade, double preco) {
         this.id = id;
         this.nome = nome;
         this.quantidade = quantidade;
@@ -21,8 +16,7 @@ public class Produto {
     }
 
     int resposta = 0;
-    List<Produto> listaProdutos = new ArrayList<>();
-    Menu menu = new Menu();
+    //List<Produto> listaProdutos = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -48,6 +42,20 @@ public class Produto {
         this.preco = preco;
     }
 
+   /* @Override
+    public String toString() {
+        return "Produto{" +
+                "nome='" + nome + '\'' +
+                ", preco=" + preco +
+                ", quantidade=" + quantidade +
+                ", id=" + id +
+                '}';
+    }*/
+    /*public Produto verificaProduto(int aux, List lista){
+        return lista.stream().filter(x -> x.lista.getId() == aux).findFirst().orElse(null);
+
+    }*/
+
     public String toString() {
         return "(" + getId() + ")" + " - " + getNome() + "\n\nValor do produto: "
                 + NumberFormat.getCurrencyInstance().format(getPreco()) + "\n\nQuantidade em estoque: "
@@ -55,7 +63,7 @@ public class Produto {
                 + NumberFormat.getCurrencyInstance().format(getPreco() * getQuantidade());
     }
 
-    public void cadastrarProduto() {
+    /*public void cadastrarProduto() {
 
         Produto verifica;
         int ident = 0;
@@ -105,6 +113,6 @@ public class Produto {
         }
 
         menu.iniciarMenu();
-    }
+    }*/
 
 }
