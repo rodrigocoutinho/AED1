@@ -67,14 +67,12 @@ public class Principal {
 
                     lista.add(new Produto(ident, name, quantity, price));
 
-                    System.out.println(lista.size());
                     /*for (Produto produtos : lista) {
                         JOptionPane.showMessageDialog(null, "Lista de Produtos" + "\n\n" + produtos);
                     }*/
-                    System.out.println(lista.size());
 
                     resposta = JOptionPane.showConfirmDialog(null, "Deseja cadastrar um novo produto?");
-                    System.out.println(lista.size());
+
                 } while (resposta == JOptionPane.YES_OPTION);
                 //produto.cadastrarProduto();
                 break;
@@ -89,7 +87,6 @@ public class Principal {
                 System.out.println(lista.size());
                 System.out.println("");
                 for (int i=0; i<lista.size();i++) {
-                    //System.out.println(lista.get(i).toString());
                     JOptionPane.showMessageDialog(null, "Lista de Produtos" + "\n\n" + lista.get(i).toString());
                 }
                 break;

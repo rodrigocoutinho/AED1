@@ -16,7 +16,6 @@ public class Produto {
     }
 
     int resposta = 0;
-    //List<Produto> listaProdutos = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -42,19 +41,6 @@ public class Produto {
         this.preco = preco;
     }
 
-   /* @Override
-    public String toString() {
-        return "Produto{" +
-                "nome='" + nome + '\'' +
-                ", preco=" + preco +
-                ", quantidade=" + quantidade +
-                ", id=" + id +
-                '}';
-    }*/
-    /*public Produto verificaProduto(int aux, List lista){
-        return lista.stream().filter(x -> x.lista.getId() == aux).findFirst().orElse(null);
-
-    }*/
 
     public String toString() {
         return "(" + getId() + ")" + " - " + getNome() + "\n\nValor do produto: "
