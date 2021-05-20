@@ -1,5 +1,6 @@
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Principal {
@@ -10,14 +11,12 @@ public class Principal {
 
 
             JOptionPane.showMessageDialog(null,
-                "O que você deseja fazer?\n\n\n1 - Cadastrar produto\n\n2 - Excluir produto\n\n3 - Adicionar produto ao estoque\n\n4- Remover produto do estoque\n\n5 - Exibir todos os produtos em estoque\n\n6 - Exibir solicitações pendentes\n\n7 - Atender solicitação de produto\n\n8 - Cadastrar fornecedor\n\n9 - Alterar dados de um fornecedor\n\n10 - Excluir fornecedor\n\n11 - Solicitar produto\n\n0 - Sair");
+                "O que você deseja fazer?\n\n\n1 - Cadastrar novo produto\n\n2 - Excluir produto\n\n3 - Inserir quantidade ao estoque\n\n4- Remover quantidade do estoque\n\n5 - Exibir todos os produtos em estoque\n\n6 - Cadastrar fornecedor\n\n7 - Alterar dados de um fornecedor\n\n8 - Excluir fornecedor\n\n9 - Solicitar produto\n\n0 - Sair");
 
                 
                 resposta = Integer.parseInt(JOptionPane.showInputDialog(""));
                 
-                return resposta;
-            
-        
+                return resposta;   
     }
 
     public static void main(String[] args){
@@ -32,13 +31,12 @@ public class Principal {
 
         do{ 
 
-        
             iniciarMenu();
             
-
             switch(resposta){
 
                 case 0:
+
                     JOptionPane.showMessageDialog(null, "Tudo bem, até breve!!");
                     break;
 
@@ -67,14 +65,43 @@ public class Principal {
 
                         listaProdutos.add(prod);
 
+                        JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso!");
+
                         resposta = JOptionPane.showConfirmDialog(null, "Deseja cadastrar um novo produto?");
 
                     }while(resposta == JOptionPane.YES_OPTION);
 
                     break;
+                
+                
+                case 2:
 
+                    do{
+                        int aux = Integer.parseInt(JOptionPane.showInputDialog("Informe o ID do produto que deseja excluir:"));
+                        verifica = listaProdutos.stream().filter(x -> x.getId() == aux).findFirst().orElse(null);
+
+                        if (verifica == null){
+
+                            JOptionPane.showMessageDialog(null, "O ID informado não existe");
+                            
+                        }else{
+
+                            listaProdutos.removeIf(x -> x.getId() == aux);
+                            JOptionPane.showMessageDialog(null, "Produto excluído com sucesso!");
+                        }
+                            
+                        resposta = JOptionPane.showConfirmDialog(null, "Deseja excluir um novo produto?");
+
+                    }while(resposta == JOptionPane.YES_OPTION);
+
+                    break;
+
+                    
+                    
 
                 case 5:
+
+                    Collections.sort(listaProdutos);
                     for (Produto produtos : listaProdutos) {
                         JOptionPane.showMessageDialog(null, "Lista de Produtos" + "\n\n" + produtos);
                     }
@@ -92,11 +119,6 @@ public class Principal {
 
         }while(resposta != 0);
 
-
-
-
     }
-
-    
 
 }

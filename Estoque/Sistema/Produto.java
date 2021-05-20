@@ -1,11 +1,11 @@
 import java.text.NumberFormat;
 
-public class Produto {
+public class Produto implements Comparable<Produto> {
 
     private String nome;
-    private double preco;
-    private int quantidade;
-    private int id;
+    private Double preco;
+    private Integer quantidade;
+    private Integer id;
 
     protected Produto() {
     }
@@ -52,13 +52,13 @@ public class Produto {
 
         return new Produto(id, nome, quantidade, preco);
         
-}
+    }
 
-        
+    @Override
+    public int compareTo(Produto prod2){
 
-    
-
-  
+        return id.compareTo(prod2.getId());
+    }
 
 }
 
