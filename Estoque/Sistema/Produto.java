@@ -10,34 +10,34 @@ public class Produto implements Comparable<Produto> {
     protected Produto() {
     }
 
-    protected Produto(int id, String nome, int quantidade, double preco) {
+    protected Produto(Integer id, String nome, int quantidade, double preco) {
         this.id = id;
         this.nome = nome;
         this.quantidade = quantidade;
         this.preco = preco;
     }
 
-    public int getId() {
+    protected Integer getId() {
         return id;
     }
 
-    public String getNome() {
+    protected String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
+    protected void setNome(String nome) {
         this.nome = nome;
     }
 
-    public int getQuantidade() {
+    protected int getQuantidade() {
         return quantidade;
     }
 
-    public double getPreco() {
+    protected double getPreco() {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    protected void setPreco(double preco) {
         this.preco = preco;
     }
 

@@ -8,10 +8,11 @@ public class Fornecedor implements Comparable<Fornecedor> {
     private String observacoes;
     private String email;
 
-    protected Fornecedor(){
+    protected Fornecedor() {
     }
 
-    protected Fornecedor(Integer id, String cnpj, String razaoSocial, String telefone, String email, String observacoes) {
+    protected Fornecedor(Integer id, String cnpj, String razaoSocial, String telefone, String email,
+            String observacoes) {
         this.id = id;
         this.cnpj = cnpj;
         this.razaoSocial = razaoSocial;
@@ -65,12 +66,12 @@ public class Fornecedor implements Comparable<Fornecedor> {
     }
 
     public String toString() {
-        return "(" + getId() + ")" + " - " + getRazaoSocial() + "\n\nCNPJ: "
-                + getCNPJ() + "\n\nTelefone: " + getTelefone() + "\n\nE-mail: " + getEmail() + "\n\nObservações: "
-                + getObservacoes();
+        return "(" + getId() + ")" + " - " + getRazaoSocial() + "\n\nCNPJ: " + getCNPJ() + "\n\nTelefone: "
+                + getTelefone() + "\n\nE-mail: " + getEmail() + "\n\nObservações: " + getObservacoes();
     }
 
-    protected Fornecedor cadastrarFornecedor(Integer id, String cnpj, String razaoSocial, String telefone, String email, String observacoes) {
+    protected Fornecedor cadastrarFornecedor(Integer id, String cnpj, String razaoSocial, String telefone, String email,
+            String observacoes) {
 
         return new Fornecedor(id, cnpj, razaoSocial, telefone, email, observacoes);
 
@@ -82,6 +83,3 @@ public class Fornecedor implements Comparable<Fornecedor> {
         return id.compareTo(fornec2.getId());
     }
 }
-
-
-

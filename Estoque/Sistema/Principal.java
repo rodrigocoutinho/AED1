@@ -10,7 +10,7 @@ public class Principal {
     static int iniciarMenu() {
 
         JOptionPane.showMessageDialog(null,
-                "O que você deseja fazer?\n\n\n1 - Cadastrar novo produto\n\n2 - Excluir produto\n\n3 - Inserir quantidade ao estoque\n\n4- Remover quantidade do estoque\n\n5 - Exibir todos os produtos em estoque\n\n6 - Cadastrar fornecedor\n\n7 - Alterar dados de um fornecedor\n\n8 - Excluir fornecedor\n\n9 - Exibir lista de fornecedores\n\n0 - Sair");
+                "O que você deseja fazer?\n\n\n1 - Cadastrar novo produto\n\n2 - Excluir produto\n\n3 - Inserir quantidade ao estoque\n\n4- Remover quantidade do estoque\n\n5 - Exibir todos os produtos em estoque\n\n6 - Cadastrar fornecedor\n\n7 - Excluir fornecedor\n\n8 - Exibir lista de fornecedores\n\n0 - Sair");
 
         resposta = Integer.parseInt(JOptionPane.showInputDialog(""));
 
@@ -155,7 +155,7 @@ public class Principal {
 
                     break;
 
-                case 8:
+                case 7:
 
                     do {
                         int aux = Integer.parseInt(
@@ -179,7 +179,7 @@ public class Principal {
 
                     break;
 
-                case 9:
+                case 8:
 
                     Collections.sort(listaFornecedores);
                     for (Fornecedor fornecedores : listaFornecedores) {
