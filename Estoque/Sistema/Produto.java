@@ -51,15 +51,13 @@ public class Produto implements Comparable<Produto> {
     protected Produto cadastrarProduto(int id, String nome, int quantidade, double preco) {
 
         return new Produto(id, nome, quantidade, preco);
-        
+
     }
 
     @Override
-    public int compareTo(Produto prod2){
+    public int compareTo(Produto prod2) {
 
         return id.compareTo(prod2.getId());
     }
 
 }
-
-
