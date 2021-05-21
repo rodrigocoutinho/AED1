@@ -97,6 +97,53 @@ public class Principal {
                     } while (resposta == JOptionPane.YES_OPTION);
 
                     break;
+                case 3:
+                    do {
+                        int aux = Integer
+                                .parseInt(JOptionPane.showInputDialog("Informe o ID do produto que deseja inserir estoque:"));
+                        verifica = listaProdutos.stream().filter(x -> x.getId() == aux).findFirst().orElse(null);
+
+                        if (verifica == null) {
+
+                            JOptionPane.showMessageDialog(null, "O ID informado não existe");
+
+                        } else {
+                            int qtd = Integer
+                                    .parseInt(JOptionPane.showInputDialog("Informe a quantidade que deseja adicionar:"));
+                            for (Produto p : listaProdutos){
+                                if(p.getId()==aux){
+                                    p.setQuantidade(p.getQuantidade()+qtd);
+                                    JOptionPane.showMessageDialog(null, "Estoque adicionado com sucesso!");
+                                }
+                            }
+                        }
+
+                    } while (resposta == JOptionPane.YES_OPTION);
+
+                    break;
+
+                case 4:
+                    do {
+                        int aux = Integer
+                                .parseInt(JOptionPane.showInputDialog("Informe o ID do produto que deseja reduzir estoque:"));
+                        verifica = listaProdutos.stream().filter(x -> x.getId() == aux).findFirst().orElse(null);
+
+                        if (verifica == null) {
+
+                            JOptionPane.showMessageDialog(null, "O ID informado não existe");
+
+                        } else {
+                            int qtde = Integer
+                                    .parseInt(JOptionPane.showInputDialog("Informe a quantidade que deseja reduzir:"));
+                            for (Produto p : listaProdutos){
+                                if(p.getId()==aux && p.getQuantidade()>=qtde){
+                                    p.setQuantidade(p.getQuantidade()-qtde);
+                                    JOptionPane.showMessageDialog(null, "Estoque reduzido com sucesso!");
+                                }
+                            }
+                        }
+
+                    } while (resposta == JOptionPane.YES_OPTION);
 
                 case 5:
 

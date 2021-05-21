@@ -1,4 +1,6 @@
+import javax.swing.*;
 import java.text.NumberFormat;
+import java.util.ArrayList;
 
 public class Produto implements Comparable<Produto> {
 
@@ -31,6 +33,10 @@ public class Produto implements Comparable<Produto> {
 
     protected int getQuantidade() {
         return quantidade;
+    }
+
+  void setQuantidade(int qtd){
+        this.quantidade = qtd;
     }
 
     protected double getPreco() {
