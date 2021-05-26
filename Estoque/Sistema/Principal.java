@@ -145,6 +145,8 @@ public class Principal {
 
                     } while (resposta == JOptionPane.YES_OPTION);
 
+                    break;
+
                 case 5:
 
                     Collections.sort(listaProdutos);

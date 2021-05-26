@@ -1,6 +1,5 @@
-import javax.swing.*;
 import java.text.NumberFormat;
-import java.util.ArrayList;
+
 
 public class Produto implements Comparable<Produto> {
 
