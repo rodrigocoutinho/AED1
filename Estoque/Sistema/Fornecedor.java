@@ -29,7 +29,7 @@ public class Fornecedor implements Comparable<Fornecedor> {
         return cnpj;
     }
 
-    protected void setNome(String cnpj) {
+    protected void setCNPJ(String cnpj) {
         this.cnpj = cnpj;
     }
 
